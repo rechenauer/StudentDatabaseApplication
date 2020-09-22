@@ -70,4 +70,7 @@ public class Student {
     }
 
 //Show status
+    public String showInfo(){
+        return "Name: " + firstName + " "+ lastName + "\nCourses Enrolled: " + courses + "\nBalance: $"+ tuitionBalance;
+    }
 }

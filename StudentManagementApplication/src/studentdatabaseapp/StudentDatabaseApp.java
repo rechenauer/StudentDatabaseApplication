@@ -6,6 +6,7 @@ public class StudentDatabaseApp {
         Student s = new Student();
         s.enroll();
         s.payTuition();
+        System.out.println(s.showInfo());
         //Create n number of new students
     }
 }
