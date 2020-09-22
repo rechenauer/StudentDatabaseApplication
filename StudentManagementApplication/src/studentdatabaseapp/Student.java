@@ -8,7 +8,7 @@ public class Student {
     private String lastName;
     private int year;
     private String studentID;
-    private String courses;
+    private String courses = " ";
     private int tuitionBalance = 0;
     private static int costOfCourse = 600;
     private static int id = 1000;
@@ -51,13 +51,23 @@ public class Student {
 
         }
         System.out.println("Enrolled in: "+courses);
-        System.out.println("Tuition Balance: "+tuitionBalance);
-
     }
 
-
+//view balance
+    public void viewBalance(){
+        System.out.println("Your balance is: " + tuitionBalance);
+    }
 
 //Pay tuition
+    public void payTuition() {
+        viewBalance();
+        System.out.println("How much would you want to pay right now?");
+        Scanner in = new Scanner(System.in);
+        int payment = in.nextInt();
+        System.out.println("Thank you for your payment of $"+payment);
+        tuitionBalance-=payment;
+        viewBalance();
+    }
 
 //Show status
 }
